@@ -3451,124 +3451,71 @@ input, select, textarea {
 
 
 /* Intro section styling */
+/* Make #intro a flex container to center its contents */
 #intro {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    flex-direction: column;
-    height: 100vh; /* Full viewport height */
-    text-align: center;
-    padding: 4rem 4rem 2rem 4rem; /* Reduce top and bottom padding */
-    color: #fff;
-    margin: 0; /* Remove any extra margin */
-}
-
-/* Image container styling */
-.intro-image-container {
-    width: 100%; /* Full width */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: -1rem; /* Bring the image closer to the text */
-}
-
-/* Image styling */
-.intro-image {
-    max-width: 250px; /* Reduce the image size */
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* For smaller screens */
-@media screen and (max-width: 980px) {
-    #intro {
-        padding: 3rem 4rem 1rem 4rem; /* Adjust padding */
-    }
-
-    .intro-image-container {
-        width: 80%;
-    }
-
-    .intro-image {
-        max-width: 200px;
-    }
-}
-
-@media screen and (max-width: 736px) {
-    #intro {
-        padding: 2rem 2rem 1rem 2rem; /* Adjust padding further for small screens */
-    }
-
-    .intro-image-container {
-        width: 85%;
-    }
-
-    .intro-image {
-        max-width: 150px;
-    }
-}
-
-
-/* General reset for padding/margins */
-#intro {
-  padding: 4rem 4rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; /* Vertically centers content */
+  align-items: center; /* Horizontally centers content */
   text-align: center;
+  padding: 4rem 4rem 2rem;
+  min-height: 80vh; /* Ensure intro section takes at least 80% of the viewport height */
 }
 
+/* Adjust intro-text */
 #intro .intro-text {
-  max-width: 800px; /* Limiting width to prevent text from stretching too much */
+  max-width: 800px;
 }
 
-#intro h1 {
-  font-size: 3.5rem; /* Adjust based on screen size */
-  margin-bottom: 1rem;
+/* Ensure the image container is centered as well */
+.intro-image-container {
+  display: flex;
+  justify-content: center; /* Horizontally centers the image */
+  align-items: center; /* Vertically centers the image */
+  margin-top: 2rem; /* Adds some spacing between the text and image */
+  width: 100%;
 }
 
-#intro p {
-  font-size: 1.25rem; /* Adjust size */
-  margin-bottom: 1rem;
+/* The image itself should be responsive and centered */
+.intro-image {
+  max-width: 100%; /* Makes sure the image does not overflow */
+  height: auto; /* Ensures the image maintains aspect ratio */
+  border-radius: 50%; /* Optional: to give the image a circular appearance */
 }
 
-/* For small screens */
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 980px) {
   #intro {
-    padding: 3rem 2rem 1rem;
+    padding: 3rem 2rem 2rem;
     min-height: 80vh;
   }
 
   #intro h1 {
-    font-size: 2.5rem; /* Smaller heading */
+    font-size: 3rem; /* Smaller heading for mobile */
   }
 
   #intro p {
-    font-size: 1rem; /* Adjust text size for mobile */
+    font-size: 1.1rem;
+  }
+
+  .intro-image-container {
+    margin-top: 1.5rem; /* Reduce spacing on smaller screens */
   }
 }
 
-/* For extra small screens */
 @media screen and (max-width: 736px) {
   #intro {
     padding: 2rem 1rem 1rem;
   }
 
   #intro h1 {
-    font-size: 2rem; /* Even smaller heading */
+    font-size: 2.5rem;
   }
 
   #intro p {
-    font-size: 0.9rem; /* Adjust text for small screens */
-  }
-
-  #intro .actions {
-    display: none; /* Hide actions on small screens, if needed */
+    font-size: 1rem;
   }
 }
-
 
 
 /* Header */
