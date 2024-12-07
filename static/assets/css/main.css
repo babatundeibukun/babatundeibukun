@@ -3449,46 +3449,69 @@ input, select, textarea {
 				opacity: 0;
 			}
 
-		@media screen and (max-width: 980px) {
 
-			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
-			}
+/* Intro section styling */
+#intro {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 4rem 4rem 2rem 4rem; /* Reduce top and bottom padding */
+    color: #fff;
+    margin: 0; /* Remove any extra margin */
+}
 
-				#intro p br {
-					display: none;
-				}
+/* Image container styling */
+.intro-image-container {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: -1rem; /* Bring the image closer to the text */
+}
 
-				#intro + #header {
-					margin-top: -14rem;
-				}
+/* Image styling */
+.intro-image {
+    max-width: 250px; /* Reduce the image size */
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-		}
+/* For smaller screens */
+@media screen and (max-width: 980px) {
+    #intro {
+        padding: 3rem 4rem 1rem 4rem; /* Adjust padding */
+    }
 
-		@media screen and (max-width: 736px) {
+    .intro-image-container {
+        width: 80%;
+    }
 
-			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
-			}
+    .intro-image {
+        max-width: 200px;
+    }
+}
 
-				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
-				}
+@media screen and (max-width: 736px) {
+    #intro {
+        padding: 2rem 2rem 1rem 2rem; /* Adjust padding further for small screens */
+    }
 
-				#intro p {
-					font-size: 1rem;
-					margin-top: 0rem;
-				}
+    .intro-image-container {
+        width: 85%;
+    }
 
-				#intro .actions {
-					display: none;
-				}
+    .intro-image {
+        max-width: 150px;
+    }
+}
 
-		}
+
+
+
 
 /* Header */
 
