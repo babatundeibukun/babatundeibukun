@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #1d3557;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -56,7 +56,7 @@ p a:hover {
     display: inline-block;
     margin: 20px 0;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #1d3557;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -70,7 +70,7 @@ p a:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
+    background-color: #1d3557;
     color: #fff;
     font-size: 0.9em;
 }

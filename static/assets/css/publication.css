@@ -23,7 +23,7 @@ h1, h2, h3 {
 }
 
 header {
-    background-color: #4a90e2;
+    background-color: #1d3557;
     padding: 40px 0;
     text-align: center;
     color: white;
@@ -74,7 +74,7 @@ header p {
 
 .publication-link {
     text-decoration: none;
-    background-color: #4a90e2;
+    background-color: #1d3557;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -87,7 +87,7 @@ header p {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #1d3557;
     color: white;
     text-align: center;
     padding: 20px 0;
