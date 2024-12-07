@@ -3510,6 +3510,64 @@ input, select, textarea {
 }
 
 
+/* General reset for padding/margins */
+#intro {
+  padding: 4rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#intro .intro-text {
+  max-width: 800px; /* Limiting width to prevent text from stretching too much */
+}
+
+#intro h1 {
+  font-size: 3.5rem; /* Adjust based on screen size */
+  margin-bottom: 1rem;
+}
+
+#intro p {
+  font-size: 1.25rem; /* Adjust size */
+  margin-bottom: 1rem;
+}
+
+/* For small screens */
+@media screen and (max-width: 980px) {
+  #intro {
+    padding: 3rem 2rem 1rem;
+    min-height: 80vh;
+  }
+
+  #intro h1 {
+    font-size: 2.5rem; /* Smaller heading */
+  }
+
+  #intro p {
+    font-size: 1rem; /* Adjust text size for mobile */
+  }
+}
+
+/* For extra small screens */
+@media screen and (max-width: 736px) {
+  #intro {
+    padding: 2rem 1rem 1rem;
+  }
+
+  #intro h1 {
+    font-size: 2rem; /* Even smaller heading */
+  }
+
+  #intro p {
+    font-size: 0.9rem; /* Adjust text for small screens */
+  }
+
+  #intro .actions {
+    display: none; /* Hide actions on small screens, if needed */
+  }
+}
 
 
 
