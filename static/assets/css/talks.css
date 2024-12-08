@@ -1,0 +1,83 @@
+/* General Reset */
+body, h1, h2, p, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body and Font Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Main Content Section */
+.content {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Facebook Post Grid */
+.post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post-title {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #777;
+    padding: 5px 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1d3557;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 768px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
