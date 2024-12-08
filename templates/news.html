@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Highlights</title>
-    <link rel="stylesheet" href="../static/assets/css/news.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/news.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -13,10 +13,10 @@
         <nav class="nav">
             <div class="container flex-wrap">
                 <ul class="navbar">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../publications/index.html">Publications</a></li>
-                    <li><a href="elements.html">Talks</a></li>
-                    <li><a href="../cv/index.html">Academic CV</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('publication_details') }}">Publications</a></li>
+                    <li><a href="{{ url_for('talks') }}">Talks</a></li>
+                    <li><a href="{{ url_for('academic_cv') }}">Academic CV</a></li>
                 </ul>
             </div>
         </nav>

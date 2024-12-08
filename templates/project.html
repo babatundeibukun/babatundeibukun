@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/project_style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="{{ url_for('home') }}" class="logo">My Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- Main Project Container -->
+    <div class="project-container">
+        <!-- Project Header Section -->
+        <section class="project-header">
+            <h1 class="project-title">{{ project.title }}</h1>
+            <p class="project-date"><strong>Date:</strong> {{ project.date }}</p>
+        </section>
+
+        <!-- Project Media Section -->
+        <section class="project-media">
+            {% if project.video_url %}
+                <h3 class="media-header">Watch the Project Video:</h3>
+                <div class="media-container video-container">
+                    <iframe
+                        src="{{ project.video_url }}"
+                        title="{{ project.title }}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            {% elif project.slides_url %}
+                <h3 class="media-header">View the Project Slides:</h3>
+                <div class="media-container slides-container">
+                    {{ project.slides_url|safe }}
+                </div>
+            {% else %}
+                <p>No media available for this project.</p>
+            {% endif %}
+        </section>
+
+        <!-- Project Description Section -->
+        <section class="project-description">
+            <h3 class="description-header">Project Overview:</h3>
+            <p>{{ project.description | safe }}</p>
+        </section>
+
+        <!-- Methodologies Section -->
+        {% if project.methodologies %}
+        <section class="project-methodologies">
+            <h3>Approach & Methodologies:</h3>
+            <ul class="methodology-list">
+                {% for method in project.methodologies %}
+                <li class="methodology-item">{{ method }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        <!-- Key Findings Section -->
+        {% if project.key_findings %}
+        <section class="project-findings">
+            <h3>Key Findings:</h3>
+            <ul class="findings-list">
+                {% for finding in project.key_findings %}
+                <li class="finding-item">{{ finding }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        <!-- Technologies Used Section -->
+        <div class="project-details">
+            <h3 class="technologies-header">Technologies Used:</h3>
+            <ul class="tech-list">
+                {% for tech in project.technologies %}
+                <li class="tech-item">{{ tech }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <section class="project-footer">
+            <a href="{{ project.github_url }}" target="_blank" class="btn github-btn">View on GitHub</a>
+            <a href="{{ url_for('home') }}" class="btn back-btn">← Back to Projects</a>
+        </section>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
